@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Chess School Survey       Form</h1>
+            <p id="description">Thank you for taking the time to help us improve the platform</p>
+        </header>
+    
+        <form id="survey-form"> 
+            <div class="form">
+              <input 
+                type="text" 
+                name="name" 
+                id="name"
+                class="form_input"
+                autocomplete="off"
+                placeholder=" " required>
+                <label for="name" id="name-label" class="form_label">Name</label>
+            </div>
+        
+            <div class="form">
+              <input 
+                type="email" 
+                id="email" 
+                class="form_input"                                     autocomplete="off" 
+                placeholder=" " required>
+                <label for="email" id="email-label" class="form_label">Email</label>
+            </div>
+
+            <div class="form">
+                <input 
+                  type="number" 
+                  id="number" 
+                  class="form_input"                                     autocomplete="off" 
+                  placeholder=" " required
+                  min="10"
+                  max="99">
+                <label for="number" id="number-label" class="form_label">Age (optional)</label>
+            </div>
+            
+            <div class="form-2">
+                <p>Which option best describes your way of playing?</p>
+                <select name="role" id="dropdown" required>
+                    <option disabled selected value>
+                        Select current role
+                    </option>
+                    <option value="agressive">Agressive</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="defensive">Defensive</option>
+                </select>
+            </div>
+
+            <div class="form-2">
+                <p>Would you recommend our school to a friend?</p>
+
+                <label class="lable-radio">
+                    <input type="radio" name="user-recommend" value="definitely" class="input-radio" checked>
+                    Definitely
+                </label>
+                
+                <label class="lable-radio">
+                    <input type="radio" name="user-recommend" value="maybe" class="input-radio">
+                    Maybe
+                </label>
+
+                <label class="lable-radio">
+                    <input type="radio" name="user-recommend" value="definitely" class="input-radio">
+                    Nope
+                </label>
+            </div>
+
+            <div class="form-2">
+
+                <legend>What would you like to see improved?</legend>
+                <input type="checkbox" id="lessons" name="improvement" value="Lessons">
+                <label for="lessons">
+                  Lessons
+                </label><br>
+        
+                <input type="checkbox" id="tournaments" name="improvement" value="Tournaments">
+                <label for="Tournaments">
+                  Tournaments
+                </label><br>
+        
+                <input type="checkbox" id="puzzles" name="improvement" value="Puzzles">
+                <label for="puzzles">
+                  Puzzles
+                </label><br>
+        
+                <input type="checkbox" id="analysis" name="improvement" value="Analysis">
+                <label for="analysis">
+                  Analysis
+                </label><br>
+        
+                <input type="checkbox" id="puzzle-battle" name="improvement" value="Puzzle Battle">
+                <label for="puzzle-battle">
+                  Puzzle Battle
+                </label>
+        
+              </div>
+
+              <div class="form">
+                <label id="comments">Any comments or suggestions?</label>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+              </div>
+
+              <div class="form">
+                <button type="submit" id="submit" class="submit-button">
+                  Submit
+                </button>
+              </div>
+        </form>
+
+    </div>
+    
+</body>
